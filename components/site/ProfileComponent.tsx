@@ -11,7 +11,7 @@ export const ProfileComponent = () => {
     <div className="relative h-[calc(100vh-150px)] md:h-full w-full">
       {/* Main content area */}
       <div className="space-y-6 p-6">
-      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-6">
+      <div className="flex flex-row items-center gap-6">
           <div className="relative w-24 h-24 lg:w-32 lg:h-32 mb-4 sm:mb-0 sm:mr-6 lg:mb-4 lg:mr-0 rounded-lg overflow-hidden border-2 border-emerald-500 shadow-lg shadow-emerald-500/20">
             <Image src="/pics/profile.jpg" alt="Profile" fill className="object-cover" />
           </div>
