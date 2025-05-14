@@ -8,7 +8,9 @@ export const SaversProjectDetails = () => {
         <h2 className="text-2xl font-bold text-blue-400">Savers: Corporate Portfolio</h2>
         <div className="flex space-x-2">
           <a 
-            href="#"
+            href="https://savers.macrotech.dev/"
+             target="_blank"
+            rel="noopener noreferrer"
             className="px-3 py-1.5 bg-emerald-900 hover:bg-emerald-800 text-emerald-100 rounded-md text-sm flex items-center transition-colors"
           >
             <ExternalLink className="w-4 h-4 mr-1.5" />
