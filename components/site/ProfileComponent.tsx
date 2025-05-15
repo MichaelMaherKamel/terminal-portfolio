@@ -52,9 +52,9 @@ const SocialLinksContent = () => {
 
 export const ProfileComponent = () => {
   return (
-    <div className="relative w-full md:h-[calc(100svh-120px)]">
+    <div className="relative w-full h-full flex flex-col">
       {/* Main content area */}
-      <div className="space-y-4 p-4 md:space-y-6 md:p-6">
+      <div className="space-y-4 p-4 md:space-y-6 md:p-6 flex-grow">
         <div className="flex flex-row items-center gap-4">
           <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-lg overflow-hidden border-2 border-emerald-500 shadow-lg shadow-emerald-500/20">
             <Image src="/pics/profile.jpg" alt="Profile" fill className="object-cover" />
@@ -84,15 +84,15 @@ export const ProfileComponent = () => {
             </div>
           </div>
         </div>
-        
-        {/* Terminal Social Links - shown inline on mobile, fixed at bottom on larger screens */}
-        <div className="block md:hidden w-full pt-2">
-          <SocialLinksContent />
-        </div>
       </div>
       
-      {/* Fixed positioning for medium screens and up */}
-      <div className="hidden md:block absolute bottom-0 left-0 w-full px-6 py-4">
+      {/* Social Links Section - Adjusted to work within tab content while showing at bottom */}
+      <div className="block md:hidden w-full px-4 pb-4 md:pb-16 mt-auto">
+        <SocialLinksContent />
+      </div>
+      
+      {/* Fixed version only for md screens and above - positioned to not interfere with footer */}
+      <div className="hidden md:block absolute bottom-4 left-0 w-full px-6">
         <SocialLinksContent />
       </div>
     </div>
