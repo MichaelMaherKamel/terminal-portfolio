@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 
 const ReadMeComponent = () => {
   return (
-    <ScrollArea className="h-[calc(100vh-150px)] md:h-[calc(100vh-170px)] lg:h-[calc(100vh-200px)] w-full">
+    <ScrollArea className="h-[calc(95svh-120px)] md:h-[calc(100svh-170px)] lg:h-[calc(100svh-200px)] w-full">
       <div className="p-6 space-y-6">
         {/* About Me and Education sections are already commented out */}
 

@@ -5,10 +5,11 @@ import { Mail, Github, Linkedin } from "lucide-react";
 import TerminalPrompt from "./terminal-prompt"
 import Link from "next/link"
 import { Upwork } from "./Icons"
+import { ScrollArea } from "@radix-ui/react-scroll-area";
 
 export const ProfileComponent = () => {
   return (
-    <div className="relative h-[calc(92svh-150px)] md:h-full w-full">
+    <ScrollArea className="h-[calc(95svh-120px)] md:h-[calc(100svh-170px)] lg:h-[calc(100svh-200px)] w-full">
       {/* Main content area */}
       <div className="space-y-6 p-6">
       <div className="flex flex-row items-center gap-6">
@@ -46,7 +47,7 @@ export const ProfileComponent = () => {
         </div>
       </div>
       <TerminalSocialLinks />
-    </div>
+    </ScrollArea>
   )
 }
 
