@@ -41,7 +41,7 @@ export const ProjectsComponent = () => {
   };
 
   return (
-    <ScrollArea className="h-[calc(88svh-150px)] md:h-[calc(88dvh-170px)] lg:h-[calc(88dvh-200px)] w-full">
+    <ScrollArea className="h-[calc(100vh-150px)] md:h-[calc(100vh-170px)] lg:h-[calc(100vh-200px)] w-full">
       <div className="p-6 space-y-6">
         {selectedProject ? (
           <>
