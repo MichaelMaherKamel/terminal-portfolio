@@ -5,16 +5,61 @@ import TerminalPrompt from "./terminal-prompt"
 import Link from "next/link"
 import { Upwork } from "./Icons"
 
+// Extracted component for social links content to avoid duplication
+const SocialLinksContent = () => {
+  return (
+    <div className="text-xs md:text-sm overflow-hidden border rounded-lg border-gray-800 shadow-lg">
+      <div className="px-3 font-mono text-gray-300 flex items-center">
+        <TerminalPrompt command="npx connect" />
+      </div>
+      <div className="font-mono text-xs md:text-sm p-3 text-gray-400">
+        <p className="animate-typewriter animation-delay-500 overflow-hidden whitespace-nowrap">Ready to connect...</p>
+        <p className="animate-pulse text-emerald-400">Waiting for contact request...</p>
+      </div>
+      <div className="flex justify-between py-2 px-3">
+        <Link
+          href="https://github.com/MichaelMaherKamel"
+          target="_blank"
+          className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
+        >
+          <Github className="w-5 h-5" />
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/michael-maher-216b13108"
+          target="_blank"
+          className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
+        >
+          <Linkedin className="w-5 h-5" />
+        </Link>
+        <Link
+          href="mailto:michaelmaherkamel@gmail.com"
+          target="_blank"
+          className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
+        >
+          <Mail className="w-5 h-5" />
+        </Link>
+        <Link
+          href="https://www.upwork.com/freelancers/michaelmaherkamelg?mp_source=share"
+          target="_blank"
+          className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
+        >
+          <Upwork className="w-4 h-4" />
+        </Link>
+      </div>
+    </div>
+  );
+};
+
 export const ProfileComponent = () => {
   return (
-    <div className="w-full">
+    <div className="relative w-full md:h-[calc(100svh-120px)]">
       {/* Main content area */}
       <div className="space-y-4 p-4 md:space-y-6 md:p-6">
         <div className="flex flex-row items-center gap-4">
-          <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 border-emerald-500 shadow-lg shadow-emerald-500/20">
+          <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-lg overflow-hidden border-2 border-emerald-500 shadow-lg shadow-emerald-500/20">
             <Image src="/pics/profile.jpg" alt="Profile" fill className="object-cover" />
           </div>
-          <div className="space-y-1 text-center sm:text-left">
+          <div className="space-y-1 text-center sm:text-left lg:text-center">
             <h1 className="text-lg md:text-xl lg:text-2xl font-bold">
               Michael Maher
             </h1>
@@ -40,49 +85,16 @@ export const ProfileComponent = () => {
           </div>
         </div>
         
-        {/* Terminal Social Links - now part of the normal flow */}
-        <div className="w-full pt-2">
-          <div className="text-xs md:text-sm overflow-hidden border rounded-lg border-gray-800 shadow-lg">
-            <div className="px-3 font-mono text-gray-300 flex items-center">
-              <TerminalPrompt command="npx connect" />
-            </div>
-            <div className="font-mono text-xs md:text-sm p-3 text-gray-400">
-              <p className="animate-typewriter animation-delay-500 overflow-hidden whitespace-nowrap">Ready to connect...</p>
-              <p className="animate-pulse text-emerald-400">Waiting for contact request...</p>
-            </div>
-            <div className="flex justify-between py-2 px-3">
-              <Link
-                href="https://github.com/MichaelMaherKamel"
-                target="_blank"
-                className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
-              >
-                <Github className="w-5 h-5" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/michael-maher-216b13108"
-                target="_blank"
-                className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
-              >
-                <Linkedin className="w-5 h-5" />
-              </Link>
-              <Link
-                href="mailto:michaelmaherkamel@gmail.com"
-                target="_blank"
-                className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
-              >
-                <Mail className="w-5 h-5" />
-              </Link>
-              <Link
-                href="https://www.upwork.com/freelancers/michaelmaherkamelg?mp_source=share"
-                target="_blank"
-                className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
-              >
-                <Upwork className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
+        {/* Terminal Social Links - shown inline on mobile, fixed at bottom on larger screens */}
+        <div className="block md:hidden w-full pt-2">
+          <SocialLinksContent />
         </div>
       </div>
+      
+      {/* Fixed positioning for medium screens and up */}
+      <div className="hidden md:block absolute bottom-0 left-0 w-full px-6 py-4">
+        <SocialLinksContent />
+      </div>
     </div>
-  )
-}
+  );
+};
