@@ -3,7 +3,7 @@ import ResponsivePortfolio from "@/components/site/ResponsivePortfolio"
 
 export default async function Home() {
   return (
-    <main className="h-svh bg-black text-gray-300">
+    <main className="bg-black text-gray-300">
       {/* Terminal Portfolio for large screens (hidden on smaller screens) */}
       <div className="hidden lg:block">
       <TerminalPortfolio  />
