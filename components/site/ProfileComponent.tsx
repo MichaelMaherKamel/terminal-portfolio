@@ -8,7 +8,7 @@ import { Upwork } from "./Icons"
 
 export const ProfileComponent = () => {
   return (
-    <div className="relative h-[calc(100vh-150px)] md:h-full w-full">
+    <div className="relative h-[calc(92svh-150px)] md:h-full w-full">
       {/* Main content area */}
       <div className="space-y-6 p-6">
       <div className="flex flex-row items-center gap-6">
