@@ -4,22 +4,22 @@ import { ExternalLink, Code, Database, Calendar, MessagesSquare, Sparkles } from
 export const Plan2DoProjectDetails = () => {
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <h2 className="text-2xl font-bold text-blue-400">PLAN2DO: Personal AI Planner</h2>
-        <div className="flex space-x-2">
+        <div className="flex space-x-4 whitespace-nowrap justify-between">
           <span 
-            className="px-3 py-1.5 bg-emerald-900/70 text-emerald-100 rounded-md text-sm flex items-center border border-emerald-700/50"
+            className="px-2 py-1.5 bg-emerald-900/70 text-emerald-100 rounded-md text-xs sm:text-sm flex items-center border border-emerald-700/50"
           >
-            <Sparkles className="w-4 h-4 mr-1.5" />
+            <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
             In Development
           </span>
           <a 
             href="https://plan2do.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1.5 bg-emerald-900 hover:bg-emerald-800 text-emerald-100 rounded-md text-sm flex items-center transition-colors"
+            className="px-2 py-1.5 bg-emerald-900 hover:bg-emerald-800 text-emerald-100 rounded-md text-xs sm:text-sm flex items-center transition-colors"
           >
-            <ExternalLink className="w-4 h-4 mr-1.5" />
+            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
             Visit Site
           </a>
         </div>

@@ -118,18 +118,17 @@ export const ProjectsComponent = () => {
               <div className="flex justify-between">
                 <h3 className="text-sm md:text-lg font-bold text-blue-400">PLAN2DO: Personal AI Planner</h3>
                 
-                {/* Mobile version - minimal badge */}
+                {/* Mobile version - simplified badge */}
                 <Badge 
-                  className="md:hidden bg-emerald-900/70 text-emerald-100 hover:bg-emerald-900 border-emerald-700/50 h-6 min-w-7 rounded-full flex items-center justify-center gap-1"
+                  className="md:hidden bg-emerald-900/70 text-emerald-100 hover:bg-emerald-900 border-emerald-700/50 px-2 text-xs rounded-sm"
                   variant="outline"
                 >
-                 <span>In</span>
-                 <span>Development</span>
+                Dev
                 </Badge>
                 
                 {/* Desktop version - full text badge */}
                 <Badge 
-                  className="hidden md:inline-flex bg-emerald-900/70 text-emerald-100 hover:bg-emerald-900 border-emerald-700/50"
+                  className="hidden md:inline-flex bg-emerald-900/70 text-emerald-100 hover:bg-emerald-900 border-emerald-700/50 text-xs px-2"
                   variant="outline"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1">
@@ -137,7 +136,7 @@ export const ProjectsComponent = () => {
                     <path d="M12 14.5v-5"/>
                     <path d="M12 8h.01"/>
                   </svg>
-                  In Development
+                  In Dev
                 </Badge>
               </div>
               <p className="mt-2 text-gray-300">
