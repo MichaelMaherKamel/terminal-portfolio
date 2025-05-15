@@ -15,7 +15,7 @@ const ResponsivePortfolio = () => {
   return (
     <div className="p-2 flex flex-col items-center justify-center bg-black">
       {/* Terminal Container */}
-      <div className="flex flex-col bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden w-full max-w-[500px] h-[svh] shadow-lg">
+      <div className="flex flex-col bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden w-full max-w-[500px] h-min shadow-lg">
        
         {/* Terminal Browser Header */}
         <ResponsiveTerminalBrowserHeader
