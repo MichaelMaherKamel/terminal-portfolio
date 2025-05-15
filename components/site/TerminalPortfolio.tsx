@@ -13,7 +13,7 @@ export default function TerminalPortfolio() {
   const [activeTab, setActiveTab] = useState('readme')
 
   return (
-    <div className="min-h-screen p-4 flex flex-col items-center justify-center bg-black">
+    <div className="p-4 flex flex-col items-center justify-center bg-black">
       {/* Terminal Container */}
       <div className="flex flex-col bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden w-full max-w-[1500px] min-h-[95vh] shadow-lg">
         
