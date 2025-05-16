@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 import { SaversProjectDetails } from '@/components/projects/Savers';
 import { SouqElRafay3ProjectDetails } from '@/components/projects/SouqElRafay3';
 import { NourantoProjectDetails } from '@/components/projects/Nouranto';
@@ -16,24 +17,77 @@ export const ProjectsComponent = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectId>(null);
   const topRef = useRef<HTMLDivElement>(null);
   
+  // Smooth scroll to top function
+  const smoothScrollToTop = () => {
+    // Find scroll containers
+    const scrollViewports = document.querySelectorAll('.scroll-area-viewport');
+    
+    // Smooth scroll animation function
+    const animateScroll = (element: HTMLElement, targetPosition: number, duration: number) => {
+      const startPosition = element.scrollTop;
+      const distance = targetPosition - startPosition;
+      let startTime: number | null = null;
+      
+      const animation = (currentTime: number) => {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        // Easing function - ease out cubic
+        const ease = (t: number) => 1 - Math.pow(1 - t, 3);
+        
+        // Calculate the new scroll position
+        const newPosition = startPosition + distance * ease(progress);
+        element.scrollTop = newPosition;
+        
+        // Continue animation if not finished
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      };
+      
+      requestAnimationFrame(animation);
+    };
+    
+    // Apply smooth scroll to all viewport elements
+    scrollViewports.forEach(viewport => {
+      if (viewport instanceof HTMLElement) {
+        animateScroll(viewport, 0, 300); // 300ms animation
+      }
+    });
+    
+    // Also try scrollIntoView with smooth behavior as a fallback
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start',
+        inline: 'start'
+      });
+    }
+  };
+
   const handleProjectClick = (projectId: ProjectId) => {
+    // Smooth scroll before state change
+    smoothScrollToTop();
     setSelectedProject(projectId);
-    // We'll scroll in useEffect after the component updates
   };
 
   const handleBackClick = () => {
+    // Smooth scroll before state change
+    smoothScrollToTop();
     setSelectedProject(null);
-    // We'll scroll in useEffect after the component updates
   };
   
-  // Use effect to scroll to top when selected project changes
+  // Additional useEffect for ensuring scroll position after render
   useEffect(() => {
-    // Use setTimeout to ensure the DOM has updated before scrolling
-    setTimeout(() => {
-      if (topRef.current) {
-        topRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-      }
-    }, 0);
+    // Short delay to allow for render
+    const timer = setTimeout(() => {
+      smoothScrollToTop();
+    }, 50);
+    
+    return () => {
+      clearTimeout(timer);
+    };
   }, [selectedProject]);
 
   const renderProjectDetails = () => {
@@ -54,13 +108,24 @@ export const ProjectsComponent = () => {
   };
 
   return (
-     <ScrollArea 
-      className="h-[calc(95svh-120px)] md:h-[calc(100svh-170px)] lg:h-[calc(100svh-200px)] w-full"
-     >
-      <div className="p-6 space-y-6">
-        {/* This invisible div is our scroll target */}
-        <div ref={topRef} style={{ height: '1px', visibility: 'hidden' }}></div>
-        
+    <ScrollArea 
+      className="h-[calc(95svh-120px)] md:h-[calc(100svh-170px)] lg:h-[calc(100svh-200px)] w-full scroll-area"
+    >
+      <div className="p-4 relative">
+        {/* Invisible scroll target at absolute top */}
+        <div 
+          ref={topRef} 
+          className="scroll-target" 
+          style={{ 
+            position: 'absolute', 
+            top: 0, 
+            left: 0, 
+            height: 1, 
+            width: '100%', 
+            visibility: 'hidden', 
+            zIndex: -1 
+          }} 
+        />
         {selectedProject ? (
           <>
             <div className="flex items-center mb-4">
@@ -74,15 +139,18 @@ export const ProjectsComponent = () => {
                 Back to Projects
               </Button>
             </div>
+            <h2 className="text-2xl font-bold text-emerald-600 mb-2">{selectedProject.charAt(0).toUpperCase() + selectedProject.slice(1)} Project</h2>
+            <Separator className="my-2" />
             {renderProjectDetails()}
           </>
         ) : (
           <>
             <h2 className="text-2xl font-bold text-emerald-600">Projects</h2>
+            <Separator className="my-2" />
             
             {/* Savers */}
             <div 
-              className="border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
+              className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
               onClick={() => handleProjectClick('savers')}
             >
               <h3 className="text-sm md:text-lg font-bold text-blue-400">Savers: Corporate Portfolio</h3>
@@ -96,9 +164,9 @@ export const ProjectsComponent = () => {
               </div>
             </div>
 
-              {/* PokeStart */}
+            {/* PokeStart */}
             <div 
-              className="border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
+              className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
               onClick={() => handleProjectClick('pokestart')}
             >
               <h3 className="text-sm md:text-lg font-bold text-blue-400">PokeStart: SolidStart + Go Demo</h3>
@@ -114,7 +182,7 @@ export const ProjectsComponent = () => {
             
             {/* SouqElRafay3 */}
             <div 
-              className="border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
+              className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
               onClick={() => handleProjectClick('souqelrafay3')}
             >
               <h3 className="text-sm md:text-lg font-bold text-blue-400">SouqElRafay3: E-Commerce for Household Items</h3>
@@ -128,9 +196,9 @@ export const ProjectsComponent = () => {
               </div>
             </div>
             
-             {/* PLAN2DO */}
-             <div 
-              className="border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors relative"
+            {/* PLAN2DO */}
+            <div 
+              className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors relative"
               onClick={() => handleProjectClick('plan2do')}
             >
               <div className="flex justify-between">
@@ -169,7 +237,7 @@ export const ProjectsComponent = () => {
             
             {/* Nouranto */}
             <div 
-              className="border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
+              className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
               onClick={() => handleProjectClick('nouranto')}
             >
               <h3 className="text-sm md:text-lg font-bold text-blue-400">Nouranto: Company Portfolio</h3>

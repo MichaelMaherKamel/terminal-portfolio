@@ -1,3 +1,4 @@
+// ReadMeComponent.jsx
 import { Code, Database, Cloud, GitBranch } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
@@ -5,69 +6,65 @@ import { Separator } from "@/components/ui/separator";
 const ReadMeComponent = () => {
   return (
     <ScrollArea className="h-[calc(95svh-120px)] md:h-[calc(100svh-170px)] lg:h-[calc(100svh-200px)] w-full">
-      <div className="p-6 space-y-6">
-        {/* About Me and Education sections are already commented out */}
-
-        <section className="space-y-4">
-          <h2 className="text-2xl font-bold text-emerald-600">Professional Expertise</h2>
-          <Separator className="my-2" />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
-              <div className="flex items-center mb-3">
-                <Code className="w-6 h-6 text-green-500 mr-2" />
-                <h4 className="font-bold text-lg">Full Stack Development</h4>
-              </div>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>JavaScript, TypeScript, Go, Python</li>
-                <li>React, Next.js, SolidJS, SolidStart</li>
-                <li>Node.js, Express.js, Bun</li>
-                <li>HTML5, CSS3, TailwindCSS, Responsive Design</li>
-              </ul>
+      <div className="p-4">
+        <h2 className="text-2xl font-bold text-emerald-600">Expertise</h2>
+        <Separator className="my-2" />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
+            <div className="flex items-center mb-3">
+              <Code className="w-6 h-6 text-green-500 mr-2" />
+              <h4 className="font-bold text-lg">Full Stack Development</h4>
             </div>
-            
-            <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
-              <div className="flex items-center mb-3">
-                <Database className="w-6 h-6 text-indigo-500 mr-2" />
-                <h4 className="font-bold text-lg">Databases & APIs</h4>
-              </div>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>PostgreSQL, MySQL, SQLite</li>
-                <li>Serverless databases(Supabase, Neon, Turso)</li>
-                <li>RESTful APIs, GraphQL</li>
-                <li>Authentication & Authorization systems</li>
-              </ul>
-            </div>
-            
-            <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
-              <div className="flex items-center mb-3">
-                <GitBranch className="w-6 h-6 text-orange-500 mr-2" />
-                <h4 className="font-bold text-lg">DevOps & Deployment</h4>
-              </div>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>Git, GitHub, CI/CD pipelines</li>
-                <li>Docker, Kubernetes</li>
-                <li>Vercel, Netlify, AWS</li>
-                <li>Performance optimization</li>
-              </ul>
-            </div>
-            
-            <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
-              <div className="flex items-center mb-3">
-                <Cloud className="w-6 h-6 text-blue-500 mr-2" />
-                <h4 className="font-bold text-lg">Cloud Computing</h4>
-              </div>
-              <ul className="list-disc pl-6 space-y-1">
-              <li>Azure</li>
-                <li>Microsoft 365</li>
-                <li>Enterprise migrations & assessments</li>
-                <li>Technical training & architecture consulting</li>
-              </ul>
-            </div>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>JavaScript, TypeScript, Go, Python</li>
+              <li>React, Next.js, SolidJS, SolidStart</li>
+              <li>Node.js, Express.js, Bun</li>
+              <li>HTML5, CSS3, TailwindCSS, Responsive Design</li>
+            </ul>
           </div>
-        </section>
+          
+          <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
+            <div className="flex items-center mb-3">
+              <Database className="w-6 h-6 text-indigo-500 mr-2" />
+              <h4 className="font-bold text-lg">Databases & APIs</h4>
+            </div>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>PostgreSQL, MySQL, SQLite</li>
+              <li>Serverless databases(Supabase, Neon, Turso)</li>
+              <li>RESTful APIs, GraphQL</li>
+              <li>Authentication & Authorization systems</li>
+            </ul>
+          </div>
+          
+          <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
+            <div className="flex items-center mb-3">
+              <GitBranch className="w-6 h-6 text-orange-500 mr-2" />
+              <h4 className="font-bold text-lg">DevOps & Deployment</h4>
+            </div>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Git, GitHub, CI/CD pipelines</li>
+              <li>Docker, Kubernetes</li>
+              <li>Vercel, Netlify, AWS</li>
+              <li>Performance optimization</li>
+            </ul>
+          </div>
+          
+          <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
+            <div className="flex items-center mb-3">
+              <Cloud className="w-6 h-6 text-blue-500 mr-2" />
+              <h4 className="font-bold text-lg">Cloud Computing</h4>
+            </div>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Azure</li>
+              <li>Microsoft 365</li>
+              <li>Enterprise migrations & assessments</li>
+              <li>Technical training & architecture consulting</li>
+            </ul>
+          </div>
+        </div>
 
-        <section className="space-y-3">
+        <section className="mt-6">
           <h2 className="text-2xl font-bold text-emerald-600">Let's Build Something Great Together</h2>
           <Separator className="my-2" />
           <p className="text-gray-800 dark:text-gray-200">
@@ -75,7 +72,7 @@ const ReadMeComponent = () => {
           </p>
         </section>
 
-        <section className="space-y-3">
+        <section className="mt-6">
           <h2 className="text-2xl font-bold text-emerald-600">What I Offer</h2>
           <Separator className="my-2" />
           <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
@@ -87,7 +84,7 @@ const ReadMeComponent = () => {
           </ul>
         </section>
 
-        <section className="space-y-3">
+        <section className="mt-6">
           <h2 className="text-2xl font-bold text-emerald-600">Why Work With Me?</h2>
           <Separator className="my-2" />
           <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
@@ -98,7 +95,7 @@ const ReadMeComponent = () => {
           </ul>
         </section>
 
-        <section className="space-y-3">
+        <section className="mt-6">
           <h2 className="text-2xl font-bold text-emerald-600">Testimonials</h2>
           <Separator className="my-2" />
           <div className="grid grid-cols-1 gap-4">
