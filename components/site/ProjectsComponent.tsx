@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
@@ -14,14 +14,27 @@ type ProjectId = 'savers' | 'souqelrafay3' | 'plan2do' | 'nouranto' | 'pokestart
 
 export const ProjectsComponent = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectId>(null);
-
+  const topRef = useRef<HTMLDivElement>(null);
+  
   const handleProjectClick = (projectId: ProjectId) => {
     setSelectedProject(projectId);
+    // We'll scroll in useEffect after the component updates
   };
 
   const handleBackClick = () => {
     setSelectedProject(null);
+    // We'll scroll in useEffect after the component updates
   };
+  
+  // Use effect to scroll to top when selected project changes
+  useEffect(() => {
+    // Use setTimeout to ensure the DOM has updated before scrolling
+    setTimeout(() => {
+      if (topRef.current) {
+        topRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }
+    }, 0);
+  }, [selectedProject]);
 
   const renderProjectDetails = () => {
     switch (selectedProject) {
@@ -41,8 +54,13 @@ export const ProjectsComponent = () => {
   };
 
   return (
-     <ScrollArea className="h-[calc(95svh-120px)] md:h-[calc(100svh-170px)] lg:h-[calc(100svh-200px)] w-full">
+     <ScrollArea 
+      className="h-[calc(95svh-120px)] md:h-[calc(100svh-170px)] lg:h-[calc(100svh-200px)] w-full"
+     >
       <div className="p-6 space-y-6">
+        {/* This invisible div is our scroll target */}
+        <div ref={topRef} style={{ height: '1px', visibility: 'hidden' }}></div>
+        
         {selectedProject ? (
           <>
             <div className="flex items-center mb-4">

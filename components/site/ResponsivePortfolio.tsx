@@ -13,7 +13,7 @@ const ResponsivePortfolio = () => {
   const [activeTab, setActiveTab] = useState("profile")
   
   return (
-    <div className="p-2 flex flex-col items-center justify-center bg-black">
+    <div className="p-2 flex flex-col items-center justify-center">
       {/* Terminal Container */}
       <div className="flex flex-col bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden w-full max-w-[500px] h-[97svh] shadow-lg">
        
