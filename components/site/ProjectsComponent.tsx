@@ -8,10 +8,10 @@ import { SaversProjectDetails } from '@/components/projects/Savers';
 import { SouqElRafay3ProjectDetails } from '@/components/projects/SouqElRafay3';
 import { NourantoProjectDetails } from '@/components/projects/Nouranto';
 import { Plan2DoProjectDetails } from '@/components/projects/Plan2Do';
-import { PokeStartProjectDetails } from '@/components/projects/PokeStart';
+import { SvelteSideBarProjectDetails } from '@/components/projects/SvelteSideBar';
 
 // Define a type for project IDs
-type ProjectId = 'savers' | 'souqelrafay3' | 'plan2do' | 'nouranto' | 'pokestart' | null;
+type ProjectId = 'savers' | 'souqelrafay3' | 'plan2do' | 'nouranto' | 'sveltesidebar' | null;
 
 export const ProjectsComponent = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectId>(null);
@@ -100,8 +100,8 @@ export const ProjectsComponent = () => {
         return <Plan2DoProjectDetails />;
       case 'nouranto':
         return <NourantoProjectDetails />;
-      case 'pokestart':
-        return <PokeStartProjectDetails />;
+      case 'sveltesidebar':
+        return <SvelteSideBarProjectDetails />;
       default:
         return null;
     }
@@ -139,8 +139,8 @@ export const ProjectsComponent = () => {
                 Back to Projects
               </Button>
             </div>
-            <h2 className="text-2xl font-bold text-emerald-600 mb-2">{selectedProject.charAt(0).toUpperCase() + selectedProject.slice(1)} Project</h2>
-            <Separator className="my-2" />
+            {/* <h2 className="text-2xl font-bold text-emerald-600 mb-2">{selectedProject.charAt(0).toUpperCase() + selectedProject.slice(1)} Project</h2>
+            <Separator className="my-2" /> */}
             {renderProjectDetails()}
           </>
         ) : (
@@ -164,14 +164,14 @@ export const ProjectsComponent = () => {
               </div>
             </div>
 
-            {/* PokeStart */}
+            {/* sveltesidebar */}
             <div 
               className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
-              onClick={() => handleProjectClick('pokestart')}
+              onClick={() => handleProjectClick('sveltesidebar')}
             >
-              <h3 className="text-sm md:text-lg font-bold text-blue-400">PokeStart: SolidStart + Go Demo</h3>
+              <h3 className="text-sm md:text-lg font-bold text-blue-400">SvelteSideBar: Sidebar that everyone loves nowadays</h3>
               <p className="mt-2 text-gray-300">
-                A demonstration app showcasing the powerful combination of SolidStart frontend and Go backend for lightning-fast full-stack performance.
+                Created in pure Svelte and native CSS. No fancy components. No fancy stylesheets used. Just pure stuff. The Svelte one.
               </p>
               <div className="mt-3 flex items-center text-xs">
                 <span className="text-emerald-400 hover:underline flex items-center">
