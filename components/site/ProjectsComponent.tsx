@@ -6,12 +6,13 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { SaversProjectDetails } from '@/components/projects/Savers';
 import { SouqElRafay3ProjectDetails } from '@/components/projects/SouqElRafay3';
-import { NourantoProjectDetails } from '@/components/projects/Nouranto';
+import { DataSkepticProjectDetails } from '@/components/projects/DataSkeptic';
+import { ScheduleHeroAIProjectDetails } from '@/components/projects/ScheduleHeroAI';
 import { Plan2DoProjectDetails } from '@/components/projects/Plan2Do';
 import { SvelteSideBarProjectDetails } from '@/components/projects/SvelteSideBar';
 
 // Define a type for project IDs
-type ProjectId = 'savers' | 'souqelrafay3' | 'plan2do' | 'nouranto' | 'sveltesidebar' | null;
+type ProjectId = 'savers' | 'souqelrafay3' | 'plan2do' | 'dataskeptic' | 'scheduleheroai' | 'sveltesidebar' | null;
 
 export const ProjectsComponent = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectId>(null);
@@ -92,14 +93,16 @@ export const ProjectsComponent = () => {
 
   const renderProjectDetails = () => {
     switch (selectedProject) {
+      case 'dataskeptic':
+        return <DataSkepticProjectDetails />;
+      case 'scheduleheroai':
+        return <ScheduleHeroAIProjectDetails />;
       case 'savers':
         return <SaversProjectDetails />;
       case 'souqelrafay3':
         return <SouqElRafay3ProjectDetails />;
       case 'plan2do':
         return <Plan2DoProjectDetails />;
-      case 'nouranto':
-        return <NourantoProjectDetails />;
       case 'sveltesidebar':
         return <SvelteSideBarProjectDetails />;
       default:
@@ -147,6 +150,37 @@ export const ProjectsComponent = () => {
           <>
             <h2 className="text-2xl font-bold text-emerald-600">Projects</h2>
             <Separator className="my-2" />
+            {/* Data Skeptic */}
+            <div 
+              className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
+              onClick={() => handleProjectClick('dataskeptic')}
+            >
+              <h3 className="text-sm md:text-lg font-bold text-blue-400">Data Skeptic: Media Platform & Analytics Apps</h3>
+              <p className="mt-2 text-gray-300">
+                Full‑stack development across Data Skeptic with focus on NeonPixel—campaign management, CTV analytics and reporting.
+              </p>
+              <div className="mt-3 flex items-center text-xs">
+                <span className="text-emerald-400 hover:underline flex items-center">
+                  View more details <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
+            </div>
+
+            {/* ScheduleHeroAI */}
+            <div 
+              className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
+              onClick={() => handleProjectClick('scheduleheroai')}
+            >
+              <h3 className="text-sm md:text-lg font-bold text-blue-400">ScheduleHeroAI: Voice AI Scheduling SaaS</h3>
+              <p className="mt-2 text-gray-300">
+                Lead developer. React frontend and Supabase Edge Functions backend with multi‑calendar integrations and webhooks.
+              </p>
+              <div className="mt-3 flex items-center text-xs">
+                <span className="text-emerald-400 hover:underline flex items-center">
+                  View more details <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
+            </div>
             
             {/* Savers */}
             <div 
@@ -235,21 +269,6 @@ export const ProjectsComponent = () => {
               </div>
             </div>
             
-            {/* Nouranto */}
-            <div 
-              className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
-              onClick={() => handleProjectClick('nouranto')}
-            >
-              <h3 className="text-sm md:text-lg font-bold text-blue-400">Nouranto: Company Portfolio</h3>
-              <p className="mt-2 text-gray-300">
-                Next.js 15 site with Turso SQLite database, custom animations.
-              </p>
-              <div className="mt-3 flex items-center text-xs">
-                <span className="text-emerald-400 hover:underline flex items-center">
-                  View more details <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="m9 18 6-6-6-6"/></svg>
-                </span>
-              </div>
-            </div>
           </>
         )}
       </div>
