@@ -155,7 +155,7 @@ export const ProjectsComponent = () => {
               className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
               onClick={() => handleProjectClick('dataskeptic')}
             >
-              <h3 className="text-sm md:text-lg font-bold text-blue-400">Data Skeptic: Media Platform & Analytics Apps</h3>
+              <h3 className="text-sm md:text-lg font-bold text-blue-400">DataSkeptic: Media Platform & Analytics Apps</h3>
               <p className="mt-2 text-gray-300">
                 Full‑stack development across Data Skeptic with focus on NeonPixel—campaign management, CTV analytics and reporting.
               </p>
