@@ -36,7 +36,7 @@ const ReadMeComponent = () => {
               <li>Authentication & Authorization systems</li>
             </ul>
           </div>
-          
+
           <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
             <div className="flex items-center mb-3">
               <GitBranch className="w-6 h-6 text-orange-500 mr-2" />
@@ -46,6 +46,7 @@ const ReadMeComponent = () => {
               <li>Git, GitHub, CI/CD pipelines</li>
               <li>Docker, Kubernetes</li>
               <li>Vercel, Netlify, AWS</li>
+              <li>Zapier integration & workflow automation</li>
               <li>Performance optimization</li>
             </ul>
           </div>

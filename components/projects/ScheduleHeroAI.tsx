@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Code, Database, CalendarRange, Webhook, PhoneCall } from 'lucide-react';
+import { ExternalLink, Code, Database, CalendarRange, Webhook, PhoneCall, CreditCard } from 'lucide-react';
 
 export const ScheduleHeroAIProjectDetails = () => {
   return (
@@ -31,6 +31,9 @@ export const ScheduleHeroAIProjectDetails = () => {
           <li>Multi-calendar integrations: Outlook, Google Calendar, GoHighLevel, Calendly, Acuity, Square</li>
           <li>Webhook ingestion and processing for event updates</li>
           <li>Automated availability resolution and conflict handling</li>
+          <li>Comprehensive partner reseller system with co-branded and white-label models</li>
+          <li>Multi-tenant infrastructure with custom pricing and commission tracking</li>
+          <li>Automated payouts via Stripe Connect for partner revenue sharing</li>
           <li>Secure user auth and organization workspaces</li>
         </ul>
       </div>
@@ -60,6 +63,7 @@ export const ScheduleHeroAIProjectDetails = () => {
             <ul className="list-disc pl-7 text-gray-300 space-y-1">
               <li>Supabase Edge Functions</li>
               <li>PostgreSQL (Supabase)</li>
+              <li>Stripe Connect for partner payments</li>
               <li>Provider webhooks & OAuth flows</li>
               <li>Background jobs for scheduling logic</li>
             </ul>
@@ -97,6 +101,19 @@ export const ScheduleHeroAIProjectDetails = () => {
             </div>
             <p className="text-gray-300 mt-1">
               Integrated the voice assistant flow with scheduling events to complete bookings end‑to‑end.
+            </p>
+          </div>
+
+          <div>
+            <div className="flex items-center">
+              <CreditCard className="w-5 h-5 text-cyan-400 mr-2" />
+              <h4 className="text-cyan-300 font-medium">Stripe Connect Complex Integration</h4>
+            </div>
+            <p className="text-gray-300 mt-1">
+              Architected sophisticated Stripe Connect integration supporting multiple payment models. White-labeled partners receive
+              direct payments with custom pricing control, while co-branded partners utilize split payment flows with commission-based
+              revenue sharing. Implemented automated payout system with configurable commission structures, transaction tracking, and
+              reconciliation logic for both partnership models.
             </p>
           </div>
         </div>

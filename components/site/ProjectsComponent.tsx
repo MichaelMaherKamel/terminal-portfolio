@@ -167,13 +167,13 @@ export const ProjectsComponent = () => {
             </div>
 
             {/* ScheduleHeroAI */}
-            <div 
+            <div
               className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
               onClick={() => handleProjectClick('scheduleheroai')}
             >
               <h3 className="text-sm md:text-lg font-bold text-blue-400">ScheduleHeroAI: Voice AI Scheduling SaaS</h3>
               <p className="mt-2 text-gray-300">
-                Lead developer. React frontend and Supabase Edge Functions backend with multi‑calendar integrations and webhooks.
+                Lead developer. React frontend and Supabase backend with multi-calendar integrations, partner reseller system, and Stripe Connect payouts.
               </p>
               <div className="mt-3 flex items-center text-xs">
                 <span className="text-emerald-400 hover:underline flex items-center">
@@ -231,23 +231,23 @@ export const ProjectsComponent = () => {
             </div>
             
             {/* PLAN2DO */}
-            <div 
+            <div
               className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors relative"
               onClick={() => handleProjectClick('plan2do')}
             >
               <div className="flex justify-between">
-                <h3 className="text-sm md:text-lg font-bold text-blue-400">PLAN2DO: Personal AI Planner</h3>
-                
+                <h3 className="text-sm md:text-lg font-bold text-blue-400">PLAN2DO: AI Planning Platform for Developers</h3>
+
                 {/* Mobile version - simplified badge */}
-                <Badge 
+                <Badge
                   className="md:hidden bg-emerald-900/70 text-emerald-100 hover:bg-emerald-900 border-emerald-700/50 px-2 text-xs rounded-sm"
                   variant="outline"
                 >
                 Dev
                 </Badge>
-                
+
                 {/* Desktop version - full text badge */}
-                <Badge 
+                <Badge
                   className="hidden md:inline-flex bg-emerald-900/70 text-emerald-100 hover:bg-emerald-900 border-emerald-700/50 text-xs px-2"
                   variant="outline"
                 >
@@ -260,7 +260,7 @@ export const ProjectsComponent = () => {
                 </Badge>
               </div>
               <p className="mt-2 text-gray-300">
-                Next.js 15 AI planning app with Supabase PostgreSQL, Stripe subscription management, Google Calendar, WhatsApp & Telegram integrations.
+                Svelte + FastAPI AI planning platform with GitHub, ClickUp, and Notion integrations. Tiered LLM system (Gemini free tier, premium providers for subscriptions).
               </p>
               <div className="mt-3 flex items-center text-xs">
                 <span className="text-emerald-400 hover:underline flex items-center">
