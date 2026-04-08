@@ -1,5 +1,5 @@
 // ReadMeComponent.jsx
-import { Code, Database, Cloud, GitBranch } from 'lucide-react';
+import { Code, Database, Cloud, GitBranch, Bot } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
@@ -17,9 +17,9 @@ const ReadMeComponent = () => {
               <h4 className="font-bold text-lg">Full Stack Development</h4>
             </div>
             <ul className="list-disc pl-6 space-y-1">
-              <li>JavaScript, TypeScript, Go, Python</li>
-              <li>React, Next.js, SolidJS, SolidStart</li>
-              <li>Node.js, Express.js, Bun</li>
+              <li>JavaScript, TypeScript, Python</li>
+              <li>React, Next.js, Svelte, SolidJS, SolidStart</li>
+              <li>Node.js, Express.js, Bun, FastAPI</li>
               <li>HTML5, CSS3, TailwindCSS, Responsive Design</li>
             </ul>
           </div>
@@ -63,13 +63,26 @@ const ReadMeComponent = () => {
               <li>Technical training & architecture consulting</li>
             </ul>
           </div>
+
+          <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
+            <div className="flex items-center mb-3">
+              <Bot className="w-6 h-6 text-purple-500 mr-2" />
+              <h4 className="font-bold text-lg">AI & Developer Tools</h4>
+            </div>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Claude Code</li>
+              <li>Cursor</li>
+              <li>Antigravity</li>
+              <li>Codex</li>
+            </ul>
+          </div>
         </div>
 
         <section className="mt-6">
           <h2 className="text-2xl font-bold text-emerald-600">Let's Build Something Great Together</h2>
           <Separator className="my-2" />
           <p className="text-gray-800 dark:text-gray-200">
-            With over 7 years of experience in the tech industry, I help businesses, startups, and individuals build scalable, high-performance web applications, automate workflows, and optimize cloud infrastructure.
+            With over 10 years of experience in the tech industry spanning cloud engineering and full stack development, I help businesses, startups, and individuals build scalable, high-performance web applications, automate workflows, and optimize cloud infrastructure.
           </p>
         </section>
 
@@ -78,7 +91,7 @@ const ReadMeComponent = () => {
           <Separator className="my-2" />
           <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
             <li><span className="font-semibold">Web & SaaS Development</span> From idea to production, using modern frameworks and best practices.</li>
-            <li><span className="font-semibold">API Development & Integration</span> Connect systems seamlessly for improved data flow and functionality.</li>
+            <li><span className="font-semibold">API Development & MCP Integration</span> Build RESTful APIs, GraphQL endpoints, and Model Context Protocol (MCP) servers to connect AI agents with your systems.</li>
             <li><span className="font-semibold">Cloud & Serverless Architecture</span> Scalable, efficient, and cost-effective solutions.</li>
             <li><span className="font-semibold">Performance & Security Audits</span> Make your applications faster, more secure, and reliable.</li>
             <li><span className="font-semibold">Consulting & Mentoring</span> Get expert guidance on technology decisions, architecture, and best practices.</li>

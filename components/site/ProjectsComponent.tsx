@@ -7,12 +7,12 @@ import { Separator } from "@/components/ui/separator";
 import { SaversProjectDetails } from '@/components/projects/Savers';
 import { SouqElRafay3ProjectDetails } from '@/components/projects/SouqElRafay3';
 import { DataSkepticProjectDetails } from '@/components/projects/DataSkeptic';
-import { ScheduleHeroAIProjectDetails } from '@/components/projects/ScheduleHeroAI';
+import { CMGProjectDetails } from '@/components/projects/CMG';
 import { Plan2DoProjectDetails } from '@/components/projects/Plan2Do';
 import { SvelteSideBarProjectDetails } from '@/components/projects/SvelteSideBar';
 
 // Define a type for project IDs
-type ProjectId = 'savers' | 'souqelrafay3' | 'plan2do' | 'dataskeptic' | 'scheduleheroai' | 'sveltesidebar' | null;
+type ProjectId = 'savers' | 'souqelrafay3' | 'plan2do' | 'dataskeptic' | 'cmg' | 'sveltesidebar' | null;
 
 export const ProjectsComponent = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectId>(null);
@@ -95,8 +95,8 @@ export const ProjectsComponent = () => {
     switch (selectedProject) {
       case 'dataskeptic':
         return <DataSkepticProjectDetails />;
-      case 'scheduleheroai':
-        return <ScheduleHeroAIProjectDetails />;
+      case 'cmg':
+        return <CMGProjectDetails />;
       case 'savers':
         return <SaversProjectDetails />;
       case 'souqelrafay3':
@@ -166,14 +166,14 @@ export const ProjectsComponent = () => {
               </div>
             </div>
 
-            {/* ScheduleHeroAI */}
+            {/* CMG */}
             <div
               className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
-              onClick={() => handleProjectClick('scheduleheroai')}
+              onClick={() => handleProjectClick('cmg')}
             >
-              <h3 className="text-sm md:text-lg font-bold text-blue-400">ScheduleHeroAI: Voice AI Scheduling SaaS</h3>
+              <h3 className="text-sm md:text-lg font-bold text-blue-400">CMG: Agentic SaaS Platform</h3>
               <p className="mt-2 text-gray-300">
-                Lead developer. React frontend and Supabase backend with multi-calendar integrations, partner reseller system, and Stripe Connect payouts.
+                Interconnected suite of agentic micro-SaaS tools — scheduling AI, agency ops, ad management, and omni-channel AI assistant.
               </p>
               <div className="mt-3 flex items-center text-xs">
                 <span className="text-emerald-400 hover:underline flex items-center">
