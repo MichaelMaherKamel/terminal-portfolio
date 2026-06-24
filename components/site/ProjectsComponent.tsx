@@ -6,13 +6,14 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { SaversProjectDetails } from '@/components/projects/Savers';
 import { SouqElRafay3ProjectDetails } from '@/components/projects/SouqElRafay3';
+import { CalvoraProjectDetails } from '@/components/projects/Calvora';
 import { DataSkepticProjectDetails } from '@/components/projects/DataSkeptic';
 import { CMGProjectDetails } from '@/components/projects/CMG';
 import { Plan2DoProjectDetails } from '@/components/projects/Plan2Do';
 import { SvelteSideBarProjectDetails } from '@/components/projects/SvelteSideBar';
 
 // Define a type for project IDs
-type ProjectId = 'savers' | 'souqelrafay3' | 'plan2do' | 'dataskeptic' | 'cmg' | 'sveltesidebar' | null;
+type ProjectId = 'calvora' | 'savers' | 'souqelrafay3' | 'plan2do' | 'dataskeptic' | 'cmg' | 'sveltesidebar' | null;
 
 export const ProjectsComponent = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectId>(null);
@@ -93,6 +94,8 @@ export const ProjectsComponent = () => {
 
   const renderProjectDetails = () => {
     switch (selectedProject) {
+      case 'calvora':
+        return <CalvoraProjectDetails />;
       case 'dataskeptic':
         return <DataSkepticProjectDetails />;
       case 'cmg':
@@ -150,6 +153,22 @@ export const ProjectsComponent = () => {
           <>
             <h2 className="text-2xl font-bold text-emerald-600">Projects</h2>
             <Separator className="my-2" />
+            {/* Calvora AI */}
+            <div
+              className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
+              onClick={() => handleProjectClick('calvora')}
+            >
+              <h3 className="text-sm md:text-lg font-bold text-blue-400">Calvora AI: Voice Agent Platform</h3>
+              <p className="mt-2 text-gray-300">
+                AI voice agents that answer inbound calls to book appointments and run outbound sales campaigns — real-time conversation, Google Calendar booking, and a live analytics dashboard.
+              </p>
+              <div className="mt-3 flex items-center text-xs">
+                <span className="text-emerald-400 hover:underline flex items-center">
+                  View more details <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
+            </div>
+
             {/* Data Skeptic */}
             <div 
               className="mt-4 border border-zinc-800 rounded-md p-4 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors"
