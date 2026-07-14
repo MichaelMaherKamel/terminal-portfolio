@@ -240,7 +240,7 @@ export const ProjectsComponent = () => {
             >
               <h3 className="text-sm md:text-lg font-bold text-blue-400">SouqElRafay3: E-Commerce for Household Items</h3>
               <p className="mt-2 text-gray-300">
-                SolidJS app with Supabase PostgreSQL, Fawry payments, Cart and Inventory management systems, admin/seller dashboards with RBAC roles.
+                React + Next.js app on PostgreSQL with Fawry payments, Cart and Inventory management systems, admin/seller dashboards with RBAC roles.
               </p>
               <div className="mt-3 flex items-center text-xs">
                 <span className="text-emerald-400 hover:underline flex items-center">

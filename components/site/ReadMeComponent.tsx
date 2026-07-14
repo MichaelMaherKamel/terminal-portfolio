@@ -1,5 +1,5 @@
 // ReadMeComponent.jsx
-import { Code, Database, Cloud, GitBranch, Bot } from 'lucide-react';
+import { Code, Database, GitBranch, Bot, FlaskConical } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
@@ -19,7 +19,7 @@ const ReadMeComponent = () => {
             <ul className="list-disc pl-6 space-y-1">
               <li>JavaScript, TypeScript, Python</li>
               <li>React, Next.js, Svelte, SolidJS, SolidStart</li>
-              <li>Node.js, Express.js, Bun, FastAPI</li>
+              <li>Node.js, Express.js, NestJS, Bun, FastAPI</li>
               <li>HTML5, CSS3, TailwindCSS, Responsive Design</li>
             </ul>
           </div>
@@ -31,7 +31,7 @@ const ReadMeComponent = () => {
             </div>
             <ul className="list-disc pl-6 space-y-1">
               <li>PostgreSQL, MySQL, SQLite</li>
-              <li>Serverless databases(Supabase, Neon, Turso)</li>
+              <li>Serverless databases (Supabase, Neon, Turso, Convex)</li>
               <li>RESTful APIs, GraphQL</li>
               <li>Authentication & Authorization systems</li>
             </ul>
@@ -53,14 +53,14 @@ const ReadMeComponent = () => {
           
           <div className="bg-zinc-950 p-4 rounded-lg shadow-md">
             <div className="flex items-center mb-3">
-              <Cloud className="w-6 h-6 text-blue-500 mr-2" />
-              <h4 className="font-bold text-lg">Cloud Computing</h4>
+              <FlaskConical className="w-6 h-6 text-blue-500 mr-2" />
+              <h4 className="font-bold text-lg">Testing & Quality</h4>
             </div>
             <ul className="list-disc pl-6 space-y-1">
-              <li>Azure</li>
-              <li>Microsoft 365</li>
-              <li>Enterprise migrations & assessments</li>
-              <li>Technical training & architecture consulting</li>
+              <li>Unit testing (Jest, Vitest)</li>
+              <li>Integration & end-to-end testing (Playwright)</li>
+              <li>Test-driven development</li>
+              <li>Code quality, linting & type safety</li>
             </ul>
           </div>
 

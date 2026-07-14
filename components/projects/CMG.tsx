@@ -5,7 +5,10 @@ export const CMGProjectDetails = () => {
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <h2 className="text-2xl font-bold text-blue-400">CMG: Agentic SaaS Platform</h2>
+        <div>
+          <h2 className="text-2xl font-bold text-blue-400">CMG: Agentic SaaS Platform</h2>
+          <p className="text-sm text-gray-400 font-mono mt-1">Software Engineer / Automation Engineer · US (Remote)</p>
+        </div>
         <div className="flex space-x-2">
           <a
             href="https://agenticdeploy.ai"
@@ -24,7 +27,8 @@ export const CMGProjectDetails = () => {
         <p className="text-gray-300 mb-4">
           An interconnected suite of agentic micro-SaaS tools encompassing scheduling AI, agency operations,
           ad management, and webinar analytics. Built as a unified platform where users can type in and use
-          web-based tools through an agentic deployment system.
+          web-based tools through an agentic deployment system. Alongside the product suite, built internal
+          tools and Zapier automation flows connecting services across the group.
         </p>
 
         <h3 className="text-lg font-semibold text-emerald-500 mb-2 mt-6">Platform Products</h3>
@@ -43,6 +47,7 @@ export const CMGProjectDetails = () => {
           <li>Webhook ingestion and processing for event updates across services</li>
           <li>Omni-channel messaging across WhatsApp, Telegram, Slack, Discord, and web</li>
           <li>Secure user auth and organization workspaces</li>
+          <li>Internal tooling and Zapier automation flows across products</li>
         </ul>
       </div>
 

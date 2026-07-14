@@ -64,7 +64,7 @@ export const ProfileComponent = () => {
               Michael Maher
             </h1>
             <p className="text-xs md:text-sm text-gray-400 font-mono">
-              <span className="text-emerald-400">Software Engineer</span>
+              <span className="text-emerald-400">Senior Full Stack Engineer</span>
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ export const ProfileComponent = () => {
             <div className="px-3 pt-1 pb-2">
               <div className="leading-relaxed">
                 <p className="animate-fadeIn">
-                  Software Engineer with 10+ years spanning cloud engineering and full stack development.
+                  Senior Full Stack Engineer with 7+ years shipping web applications and AI-powered SaaS products end to end, backed by 10+ years across cloud engineering and enterprise architecture.
                   I build interconnected agentic SaaS tools, performant web applications, and AI-powered systems using modern JavaScript frameworks and Python backends.
                 </p>
               </div>

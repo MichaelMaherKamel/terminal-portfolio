@@ -23,8 +23,8 @@ export const SouqElRafay3ProjectDetails = () => {
       <div className="bg-zinc-950 border border-zinc-800 rounded-lg p-4">
         <h3 className="text-lg font-semibold text-emerald-500 mb-3">Overview</h3>
         <p className="text-gray-300 mb-4">
-          SouqElRafay3 is a comprehensive e-commerce platform specializing in household items. Built with SolidJS 
-          for optimal performance, this platform offers a seamless shopping experience for customers while providing 
+          SouqElRafay3 is a comprehensive e-commerce platform specializing in household items. Built with React
+          and Next.js for optimal performance, this platform offers a seamless shopping experience for customers while providing
           powerful management tools for sellers and administrators.
         </p>
         
@@ -51,11 +51,11 @@ export const SouqElRafay3ProjectDetails = () => {
               <h4 className="text-blue-300 font-medium">Frontend</h4>
             </div>
             <ul className="list-disc pl-7 text-gray-300 space-y-1">
-              <li>SolidJS for reactive UI components</li>
-              <li>SolidStart for application framework</li>
+              <li>React for UI components</li>
+              <li>Next.js for application framework</li>
               <li>TypeScript for type safety</li>
               <li>Tailwind CSS for styling</li>
-              <li>SolidHooks for state management</li>
+              <li>React hooks for state management</li>
               <li>Responsive design principles</li>
             </ul>
           </div>
@@ -66,8 +66,8 @@ export const SouqElRafay3ProjectDetails = () => {
               <h4 className="text-indigo-300 font-medium">Backend & Data</h4>
             </div>
             <ul className="list-disc pl-7 text-gray-300 space-y-1">
-              <li>Supabase for PostgreSQL database</li>
-              <li>Supabase Auth for authentication</li>
+              <li>PostgreSQL database</li>
+              <li>Secure authentication and session management</li>
               <li>RESTful API endpoints</li>
               <li>Fawry payment gateway integration</li>
               <li>Google Analytics for user behavior tracking</li>
@@ -106,8 +106,8 @@ export const SouqElRafay3ProjectDetails = () => {
           <div>
             <h4 className="text-blue-300 font-medium">Performance Optimization</h4>
             <p className="text-gray-300 mt-1">
-              Leveraged SolidJS's fine-grained reactivity model to build a highly responsive interface with minimal
-              re-renders. Implemented efficient data fetching strategies and lazy loading techniques to ensure fast
+              Leveraged Next.js server-side rendering and code-splitting to build a highly responsive interface with fast
+              initial loads. Implemented efficient data fetching strategies and lazy loading techniques to ensure fast
               page loads even when browsing large product catalogs.
             </p>
           </div>

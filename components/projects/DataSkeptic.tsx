@@ -5,7 +5,10 @@ export const DataSkepticProjectDetails = () => {
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <h2 className="text-2xl font-bold text-blue-400">Data Skeptic: Media Platform & Analytics Apps</h2>
+        <div>
+          <h2 className="text-2xl font-bold text-blue-400">Data Skeptic: Media Platform & Analytics Apps</h2>
+          <p className="text-sm text-gray-400 font-mono mt-1">Senior Full Stack Developer · US (Remote)</p>
+        </div>
         <div className="flex space-x-2">
           <a 
             href="https://dataskeptic.com"
@@ -31,9 +34,10 @@ export const DataSkepticProjectDetails = () => {
       <div className="bg-zinc-950 border border-zinc-800 rounded-lg p-4">
         <h3 className="text-lg font-semibold text-emerald-500 mb-3">Overview</h3>
         <p className="text-gray-300 mb-4">
-          Full‑stack development across Data Skeptic properties with focus on NeonPixel—
+          Senior Full Stack Developer across Data Skeptic properties — the Plus platform (plus.dataskeptic.com)
+          with its React frontend, RESTful APIs, chatbot, and analytics dashboards, and NeonPixel,
           an advertiser/campaign management tool with CTV analytics and reporting.
-          Frontend in React; backend services on AWS with DynamoDB and serverless APIs.
+          Backend services on AWS with DynamoDB and serverless APIs.
         </p>
         
         <h3 className="text-lg font-semibold text-emerald-500 mb-2 mt-6">Key Features</h3>
@@ -42,6 +46,8 @@ export const DataSkepticProjectDetails = () => {
           <li>CTV analytics dashboards and scheduled reports</li>
           <li>Role-based access and workspace segmentation</li>
           <li>Serverless data ingestion and aggregation pipelines</li>
+          <li>Core action-execution engine on AWS Lambda (Python) backed by DynamoDB</li>
+          <li>AWS Fargate worker service for long-running jobs — batch processing, media transcoding, and large dataset operations</li>
         </ul>
       </div>
       
