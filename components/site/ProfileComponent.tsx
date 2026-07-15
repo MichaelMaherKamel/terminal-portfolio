@@ -3,7 +3,8 @@ import Image from "next/image"
 import { Mail, Github, Linkedin } from "lucide-react";
 import TerminalPrompt from "./terminal-prompt"
 import Link from "next/link"
-import { Upwork } from "./Icons"
+import { track } from "@vercel/analytics"
+// import { Upwork } from "./Icons"
 
 // Extracted component for social links content to avoid duplication
 const SocialLinksContent = () => {
@@ -20,6 +21,7 @@ const SocialLinksContent = () => {
         <Link
           href="https://github.com/MichaelMaherKamel"
           target="_blank"
+          onClick={() => track("social_click", { network: "github" })}
           className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
         >
           <Github className="w-5 h-5" />
@@ -27,6 +29,7 @@ const SocialLinksContent = () => {
         <Link
           href="https://www.linkedin.com/in/michael-maher-216b13108"
           target="_blank"
+          onClick={() => track("social_click", { network: "linkedin" })}
           className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
         >
           <Linkedin className="w-5 h-5" />
@@ -34,17 +37,18 @@ const SocialLinksContent = () => {
         <Link
           href="mailto:michaelmaherkamel@gmail.com"
           target="_blank"
+          onClick={() => track("social_click", { network: "email" })}
           className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
         >
           <Mail className="w-5 h-5" />
         </Link>
-        <Link
+        {/* <Link
           href="https://www.upwork.com/freelancers/michaelmaherkamelg?mp_source=share"
           target="_blank"
           className="text-gray-400 hover:text-emerald-400 transition-colors transform hover:scale-110"
         >
           <Upwork className="w-4 h-4" />
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

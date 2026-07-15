@@ -1,4 +1,5 @@
 import React from 'react';
+import { track } from '@vercel/analytics';
 import { ExternalLink, Code, Database, Calendar, MessagesSquare, Sparkles } from 'lucide-react';
 
 export const Plan2DoProjectDetails = () => {
@@ -15,6 +16,7 @@ export const Plan2DoProjectDetails = () => {
           </span>
           <a 
             href="https://plan2do.vercel.app/"
+            onClick={() => track('outbound_click', { site: 'plan2do.vercel.app' })}
             target="_blank"
             rel="noopener noreferrer"
             className="px-2 py-1.5 bg-emerald-900 hover:bg-emerald-800 text-emerald-100 rounded-md text-xs sm:text-sm flex items-center transition-colors"

@@ -7,7 +7,27 @@ const ReadMeComponent = () => {
   return (
     <ScrollArea className="h-[calc(95svh-120px)] md:h-[calc(100svh-170px)] lg:h-[calc(100svh-200px)] w-full">
       <div className="p-4">
-        <h2 className="text-2xl font-bold text-emerald-600">Expertise</h2>
+        <section>
+          <h2 className="text-2xl font-bold text-emerald-600">About Me</h2>
+          <Separator className="my-2" />
+          <p className="text-gray-800 dark:text-gray-200">
+            With over 10 years in tech spanning cloud engineering and full stack development, I build scalable, high-performance web applications, automate workflows, and design cloud-native architectures. I've shipped products end to end — from data-science media platforms and AI voice agents to e-commerce marketplaces — owning frontend, backend, and infrastructure.
+          </p>
+        </section>
+
+        <section className="mt-6">
+          <h2 className="text-2xl font-bold text-emerald-600">What I Do</h2>
+          <Separator className="my-2" />
+          <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
+            <li><span className="font-semibold">Web & SaaS Development</span> — Taking products from idea to production using modern frameworks and best practices.</li>
+            <li><span className="font-semibold">APIs & MCP Integration</span> — Building RESTful APIs, GraphQL endpoints, and Model Context Protocol (MCP) servers that connect AI agents with real systems.</li>
+            <li><span className="font-semibold">Cloud & Serverless Architecture</span> — Designing scalable, efficient, cost-effective backends on AWS and serverless platforms.</li>
+            <li><span className="font-semibold">Performance & Security</span> — Making applications faster, more secure, and more reliable.</li>
+            <li><span className="font-semibold">Technical Leadership</span> — Guiding technology decisions, architecture, and best practices; mentoring engineers and leading delivery.</li>
+          </ul>
+        </section>
+
+        <h2 className="text-2xl font-bold text-emerald-600 mt-6">Expertise</h2>
         <Separator className="my-2" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -79,33 +99,12 @@ const ReadMeComponent = () => {
         </div>
 
         <section className="mt-6">
-          <h2 className="text-2xl font-bold text-emerald-600">Let's Build Something Great Together</h2>
-          <Separator className="my-2" />
-          <p className="text-gray-800 dark:text-gray-200">
-            With over 10 years of experience in the tech industry spanning cloud engineering and full stack development, I help businesses, startups, and individuals build scalable, high-performance web applications, automate workflows, and optimize cloud infrastructure.
-          </p>
-        </section>
-
-        <section className="mt-6">
-          <h2 className="text-2xl font-bold text-emerald-600">What I Offer</h2>
+          <h2 className="text-2xl font-bold text-emerald-600">How I Work</h2>
           <Separator className="my-2" />
           <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
-            <li><span className="font-semibold">Web & SaaS Development</span> From idea to production, using modern frameworks and best practices.</li>
-            <li><span className="font-semibold">API Development & MCP Integration</span> Build RESTful APIs, GraphQL endpoints, and Model Context Protocol (MCP) servers to connect AI agents with your systems.</li>
-            <li><span className="font-semibold">Cloud & Serverless Architecture</span> Scalable, efficient, and cost-effective solutions.</li>
-            <li><span className="font-semibold">Performance & Security Audits</span> Make your applications faster, more secure, and reliable.</li>
-            <li><span className="font-semibold">Consulting & Mentoring</span> Get expert guidance on technology decisions, architecture, and best practices.</li>
-          </ul>
-        </section>
-
-        <section className="mt-6">
-          <h2 className="text-2xl font-bold text-emerald-600">Why Work With Me?</h2>
-          <Separator className="my-2" />
-          <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
-            <li>Problem solver who transforms technical challenges into business opportunities.</li>
-            <li>Aligns technical solutions with business goals.</li>
-            <li>Creates collaborative environments where knowledge sharing accelerates success.</li>
-            <li>Continuously evolves with industry trends to deliver cutting-edge solutions.</li>
+            <li>I turn technical challenges into business outcomes and keep solutions aligned with actual goals.</li>
+            <li>I work in the open — sharing knowledge, documenting decisions, and making teams faster around me.</li>
+            <li>I stay current with the ecosystem so the stack choices I make today still hold up tomorrow.</li>
           </ul>
         </section>
 

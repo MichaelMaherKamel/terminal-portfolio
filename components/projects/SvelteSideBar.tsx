@@ -1,3 +1,4 @@
+import { track } from "@vercel/analytics"
 import { ExternalLink, Palette, Smartphone, Zap, Target, Settings, Menu, X } from "lucide-react"
 
 export const SvelteSideBarProjectDetails = () => {
@@ -15,6 +16,7 @@ export const SvelteSideBarProjectDetails = () => {
         <div className="flex space-x-4 whitespace-nowrap">
           <a
             href="https://sveltesidebar.macrotech.dev/"
+            onClick={() => track('outbound_click', { site: 'sveltesidebar.macrotech.dev' })}
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1.5 bg-emerald-900 hover:bg-emerald-800 text-emerald-100 rounded-md text-sm flex items-center transition-colors"

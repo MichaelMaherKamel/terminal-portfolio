@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { track } from '@vercel/analytics';
 import { ArrowLeft } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
@@ -69,6 +70,9 @@ export const ProjectsComponent = () => {
   };
 
   const handleProjectClick = (projectId: ProjectId) => {
+    if (projectId) {
+      track('project_view', { project: projectId });
+    }
     // Smooth scroll before state change
     smoothScrollToTop();
     setSelectedProject(projectId);

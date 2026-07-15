@@ -1,4 +1,5 @@
 import React from 'react';
+import { track } from '@vercel/analytics';
 import { ExternalLink, Code, Database, ShoppingCart, Users } from 'lucide-react';
 import { Separator } from "@/components/ui/separator";
 
@@ -10,6 +11,7 @@ export const SouqElRafay3ProjectDetails = () => {
         <div className="flex space-x-2">
           <a 
             href="https://souqelrafay3.com"
+            onClick={() => track('outbound_click', { site: 'souqelrafay3.com' })}
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1.5 bg-emerald-900 hover:bg-emerald-800 text-emerald-100 rounded-md text-sm flex items-center transition-colors"

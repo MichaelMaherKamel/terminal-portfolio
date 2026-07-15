@@ -1,4 +1,5 @@
 import React from 'react';
+import { track } from '@vercel/analytics';
 import { ExternalLink, Code, Mic, PhoneCall, CalendarRange, Megaphone, LayoutDashboard } from 'lucide-react';
 
 export const CalvoraProjectDetails = () => {
@@ -9,6 +10,7 @@ export const CalvoraProjectDetails = () => {
         <div className="flex space-x-2">
           <a
             href="https://calvora.macrotech.dev/"
+            onClick={() => track('outbound_click', { site: 'calvora.macrotech.dev' })}
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1.5 bg-emerald-900 hover:bg-emerald-800 text-emerald-100 rounded-md text-sm flex items-center transition-colors"
