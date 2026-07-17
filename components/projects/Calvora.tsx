@@ -9,14 +9,14 @@ export const CalvoraProjectDetails = () => {
         <h2 className="text-2xl font-bold text-blue-400">Calvora AI: Voice Agent Platform</h2>
         <div className="flex space-x-2">
           <a
-            href="https://calvora.macrotech.dev/"
-            onClick={() => track('outbound_click', { site: 'calvora.macrotech.dev' })}
+            href="https://calvora.app/"
+            onClick={() => track('outbound_click', { site: 'calvora.app' })}
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1.5 bg-emerald-900 hover:bg-emerald-800 text-emerald-100 rounded-md text-sm flex items-center transition-colors"
           >
             <ExternalLink className="w-4 h-4 mr-1.5" />
-            calvora.macrotech.dev
+            calvora.app
           </a>
         </div>
       </div>
